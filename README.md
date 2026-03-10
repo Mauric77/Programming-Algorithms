@@ -128,6 +128,59 @@ print("Desconto Sindicato: R$", sindicato)
 print("Salário líquido: R$", salario_liquido){}' .format (n1, n2, s))
 
 
+#16
+import math
+area = float(input("Digite o tamanho da área em m²: "))
+litros_necessarios = area / 3
+quantidade_latas = math.ceil(litros_necessarios / 18)
+custo_total = quantidade_latas * 80
+print(f"Você precisará de {quantidade_latas} latas. Total: R$ {custo_total:.2f}")
+
+
+#17
+
+import math
+
+area = float(input("Digite a área em m²: "))
+# 1 litro para 6m² + 10% de folga
+litros_com_folga = (area / 6) * 1.1 
+
+# Opção 1: Apenas latas de 18L
+latas_apenas = math.ceil(litros_com_folga / 18)
+
+# Opção 2: Apenas galões de 3.6L
+galoes_apenas = math.ceil(litros_com_folga / 3.6)
+
+# Opção 3: Mistura (Melhor Preço)
+# Calculamos quantas latas inteiras cabem, e o resto vai para galões
+latas_mistas = int(litros_com_folga // 18)
+resto = litros_com_folga % 18
+galoes_mistos = math.ceil(resto / 3.6)
+
+print(f"Opção Mista: {latas_mistas} latas e {galoes_mistos} galões.")
+
+
+
+#18
+tamanho_arquivo = float(input("Tamanho do arquivo (MB): "))
+velocidade_internet = float(input("Velocidade do link (Mbps): "))
+
+# Convertendo MB para Megabits (* 8) e calculando segundos
+tempo_segundos = (tamanho_arquivo * 8) / velocidade_internet
+tempo_minutos = tempo_segundos / 60
+
+print(f"O tempo aproximado de download é de {tempo_minutos:.2f} minutos.")
+
+
+
+
+
+
+
+
+
+
+
 
 
 lista 2
