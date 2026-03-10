@@ -125,4 +125,4 @@ print("Salário bruto: R$", salario_bruto)
 print("Desconto IR: R$", ir)
 print("Desconto INSS: R$", inss)
 print("Desconto Sindicato: R$", sindicato)
-print("Salário líquido: R$", salario_liquido){}' .format (n1, n2
+print("Salário líquido: R$", salario_liquido){}' .format (n1, n2, s))
