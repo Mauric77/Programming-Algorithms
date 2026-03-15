@@ -1,29 +1,20 @@
-</> Markdown
+git comit -m
 
 
-
-Programming-Algorithms
-Desafios lista 1   Lista de Exercícios – Estrutura Sequencial
-Respostas
-
-1
-
+#1
 input (' Alô Mundo!!!!')
 
-2
-
+#2
 n = input( 'digite um numero:')
 print ('o numero informado foi : {}' .format (n))
 
-3
-
+#3
 n1 = int(input("digite um numero: "))
 n2 = int(input("digite outro numero: "))
 s = n1 + n2
 print (' a soma de {} + {} é igual a {}' .format (n1, n2, s))
 
-4
-
+#4
 nota1 = float(input("Digite a primeira nota: "))
 nota2 = float(input("Digite a segunda nota: "))
 nota3 = float(input("Digite a terceira nota: "))
@@ -32,8 +23,7 @@ media = (nota1 + nota2 + nota3 + nota4)/4
 print('A média das 4 notas é:   {:.2f}' .format( nota1, nota2, nota3, nota4, media))
 
 
-5
-
+#5
 metros= float(input('digite quantos metros: '))
 centimetros = metros*100
 print( ' o valor em centimetros é {}' .format(centimetros))
@@ -46,37 +36,32 @@ area = math.pi * raio ** 2
 print("Área do círculo:", area
 
 
-7
-
+#7
 lado = float(input("Digite o lado do quadrado: "))
 area = lado ** 2
 dobro = area * 2
 print("Área do quadrado:", area)
 print("Dobro da área:", dobro)
 
-8
-
+#8
 valor_hora = float(input("Quanto você ganha por hora? "))
 horas_mes = float(input("Quantas horas trabalhou no mês? "))
 salario = valor_hora * horas_mes
 print("Salário do mês: R$", salario)
 
-9
-
+#9
 f = float(input("Digite a temperatura em Fahrenheit: "))
 c = 5 * ((f - 32) / 9)
 print("Temperatura em Celsius:", c)
 
 
-10
-
+#10
 c = float(input("Digite a temperatura em Celsius: "))
 f = (c * 9/5) + 32
 print("Temperatura em Fahrenheit:", f)
 
 
-11
-
+#11
 n1 = int(input("Digite o primeiro número inteiro: "))
 n2 = int(input("Digite o segundo número inteiro: "))
 n3 = float(input("Digite um número real: "))
@@ -88,15 +73,13 @@ print("Soma do triplo do primeiro com o terceiro:", b)
 print("Terceiro elevado ao cubo:", c)
 
 
-12
-
+#12
 gb = float(input("Digite o valor em Gigabytes: "))
 mb = gb * 1024
 print("Valor em Megabytes:", mb)
 
 
-13
-
+#13
 gb = float(input("Digite o valor em Gigabytes: "))
 mb = gb * 1024
 kb = mb * 1024
@@ -104,8 +87,7 @@ print("Megabytes:", mb)
 print("Kilobytes:", kb)
 
 
-14
-
+# 14
 peso = float(input("Digite o peso dos peixes (kg): "))
 
 limite = 50
@@ -121,7 +103,7 @@ print("Excesso:", excesso, "kg")
 print("Multa: R$", multa)
 
 
-15
+#15
 
 valor_hora = float(input("Valor ganho por hora: "))
 horas = float(input("Horas trabalhadas no mês: "))
@@ -142,8 +124,7 @@ print("Desconto Sindicato: R$", sindicato)
 print("Salário líquido: R$", salario_liquido){}' .format (n1, n2, s))
 
 
-16
-
+#16
 import math
 area = float(input("Digite o tamanho da área em m²: "))
 litros_necessarios = area / 3
@@ -152,13 +133,13 @@ custo_total = quantidade_latas * 80
 print(f"Você precisará de {quantidade_latas} latas. Total: R$ {custo_total:.2f}")
 
 
-17
+#17
 
 import math
 
 area = float(input("Digite a área em m²: "))
 # 1 litro para 6m² + 10% de folga
-litros_com_folga = (area / 6) * 1.1 
+litros_com_folga = (area / 6) * 1.1
 
 # Opção 1: Apenas latas de 18L
 latas_apenas = math.ceil(litros_com_folga / 18)
@@ -176,7 +157,7 @@ print(f"Opção Mista: {latas_mistas} latas e {galoes_mistos} galões.")
 
 
 
-18
+#18
 tamanho_arquivo = float(input("Tamanho do arquivo (MB): "))
 velocidade_internet = float(input("Velocidade do link (Mbps): "))
 
@@ -193,7 +174,7 @@ print(f"O tempo aproximado de download é de {tempo_minutos:.2f} minutos.")
 lista 2 Estrutura de Decisão
 
 
-01
+#01
 n1 = float(input("Digite o primeiro número: "))
 n2 = float(input("Digite o segundo número: "))
 if n1 > n2:
@@ -703,7 +684,7 @@ for i in range(len(nome), 0, -1):
 
 
 #6
-meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", 
+meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
          "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
 data = input("Data (dd/mm/aaaa): ")
 d, m, a = data.split('/')
@@ -744,7 +725,7 @@ else:
 
 
 #10
-unidades = ["Zero", "Um", "Dois", "Três", "Quatro", "Cinco", "Seis", "Sete", "Oito", "Nove", "Dez", 
+unidades = ["Zero", "Um", "Dois", "Três", "Quatro", "Cinco", "Seis", "Sete", "Oito", "Nove", "Dez",
             "Onze", "Doze", "Treze", "Quatorze", "Quinze", "Dezesseis", "Dezessete", "Dezoito", "Dezenove"]
 dezenas = ["", "", "Vinte", "Trinta", "Quarenta", "Cinquenta", "Sessenta", "Setenta", "Oitenta", "Noventa"]
 
@@ -795,8 +776,4 @@ subst = {'A':'4', 'E':'3', 'I':'1', 'O':'0', 'T':'7', 'S':'5'}
 texto = input("Texto: ").upper()
 leet = "".join(subst.get(c, c) for c in texto)
 print(leet)
-
-
-
-
 
