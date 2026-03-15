@@ -175,14 +175,6 @@ print(f"O tempo aproximado de download é de {tempo_minutos:.2f} minutos.")
 
 
 
-
-
-
-
-
-
-
-
 lista 2 Estrutura de Decisão
 
 
@@ -445,7 +437,9 @@ if (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):
     print("Ano bissexto")
 else:
     print("Não é bissexto")
-Exercício 18
+
+
+#18
 data = input("Digite a data (dd/mm/aaaa): ")
 
 d,m,a = map(int,data.split("/"))
@@ -651,4 +645,143 @@ print("Quantidade:",kg)
 print("Total:",total)
 print("Desconto:",desconto)
 print("Valor a pagar:",total-desconto)
+
+
+
+lista 3 Estrutura Sequencial
+
+
+
+#1 Tamanho e Comparação de Strings
+
+s1 = input("String 1: ")
+s2 = input("String 2: ")
+
+print(f"'{s1}': {len(s1)} caracteres")
+print(f"'{s2}': {len(s2)} caracteres")
+
+print("Tamanhos iguais?" , "Sim" if len(s1) == len(s2) else "Não")
+print("Conteúdo igual?" , "Sim" if s1 == s2 else "Não")
+
+
+#2
+nome = input("Digite seu nome: ").upper()
+print(nome[::-1])
+
+
+#3
+nome = input("Digite seu nome: ")
+for letra in nome:
+    print(letra)
+
+
+#4
+nome = input("Digite seu nome: ")
+for i in range(1, len(nome) + 1):
+    print(nome[:i])
+
+
+#5
+nome = input("Digite seu nome: ")
+for i in range(len(nome), 0, -1):
+    print(nome[:i])
+
+
+#6
+meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", 
+         "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+data = input("Data (dd/mm/aaaa): ")
+d, m, a = data.split('/')
+print(f"{d} de {meses[int(m)-1]} de {a}")
+
+
+#7
+Python
+frase = input("Frase: ").lower()
+espacos = frase.count(" ")
+vogais = sum(frase.count(v) for v in "aeiou")
+print(f"Espaços: {espacos}, Vogais: {vogais}")
+
+
+#8
+
+texto = input("Frase: ").replace(" ", "").lower()
+if texto == texto[::-1]:
+    print("É um palíndromo!")
+else:
+    print("Não é um palíndromo.")
+
+
+#9
+import re
+cpf = input("CPF (xxx.xxx.xxx-xx): ")
+# Remove caracteres não numéricos
+nums = [int(d) for d in re.sub(r'\D', '', cpf)]
+
+if len(nums) == 11:
+    # Cálculo simplificado do 1º dígito verificador
+    soma = sum(nums[i] * (10 - i) for i in range(9))
+    digito1 = (soma * 10 % 11) % 10
+    print("Dígito 1 válido!" if digito1 == nums[9] else "CPF Inválido")
+else:
+    print("Formato inválido")
+
+
+
+#10
+unidades = ["Zero", "Um", "Dois", "Três", "Quatro", "Cinco", "Seis", "Sete", "Oito", "Nove", "Dez", 
+            "Onze", "Doze", "Treze", "Quatorze", "Quinze", "Dezesseis", "Dezessete", "Dezoito", "Dezenove"]
+dezenas = ["", "", "Vinte", "Trinta", "Quarenta", "Cinquenta", "Sessenta", "Setenta", "Oitenta", "Noventa"]
+
+num = int(input("Número (0-99): "))
+if num < 20:
+    print(unidades[num])
+else:
+    d, u = divmod(num, 10)
+    print(f"{dezenas[d]}" + (f" e {unidades[u]}" if u != 0 else ""))
+
+
+#11
+palavra = "PYTHON".upper()
+descoberta = ["_" for _ in palavra]
+tentativas = 6
+
+while "_" in descoberta and tentativas > 0:
+    print(f"Palavra: {' '.join(descoberta)} | Vidas: {tentativas}")
+    letra = input("Letra: ").upper()
+    if letra in palavra:
+        for i, l in enumerate(palavra):
+            if l == letra: descoberta[i] = letra
+    else:
+        tentativas -= 1
+print("Ganhou!" if "_" not in descoberta else f"Perdeu! Era {palavra}")
+
+
+
+#12
+tel = input("Telefone: ").replace("-", "")
+if len(tel) == 7:
+    tel = "3" + tel
+print(f"Telefone corrigido: {tel[:4]}-{tel[4:]}")
+
+
+
+#13
+import random
+palavra = "BANANA"
+embaralhada = "".join(random.sample(palavra, len(palavra)))
+print(f"Adivinhe a palavra: {embaralhada}")
+chute = input("Seu palpite: ").upper()
+print("Acertou!" if chute == palavra else "Errou!")
+
+
+#14
+subst = {'A':'4', 'E':'3', 'I':'1', 'O':'0', 'T':'7', 'S':'5'}
+texto = input("Texto: ").upper()
+leet = "".join(subst.get(c, c) for c in texto)
+print(leet)
+
+
+
+
 
