@@ -1,5 +1,7 @@
+````
 git comit -m
 
+Desafios lista 1   Lista de Exercícios – Estrutura Sequencial
 
 #1
 input (' Alô Mundo!!!!')
@@ -777,3 +779,4 @@ texto = input("Texto: ").upper()
 leet = "".join(subst.get(c, c) for c in texto)
 print(leet)
 
+```
