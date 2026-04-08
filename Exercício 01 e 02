@@ -1,0 +1,35 @@
+#01
+
+def soma_imposto(taxa_imposto, custo):
+
+
+    valor_imposto = custo * (taxa_imposto / 100)
+
+    valor_final = custo + valor_imposto
+
+
+    return valor_final
+
+
+try:
+    valor_custo = float(input("Digite o custo do item antes do imposto (R$): "))
+    valor_taxa = float(input("Digite a taxa de imposto (em %): "))
+
+
+    custo_total = soma_imposto(valor_taxa, valor_custo)
+
+
+    print(f"O valor do produto somado aos impostos, é: R$ {custo_total:.2f}")
+
+except ValueError:
+    print("Erro: Por favor, digite apenas números válidos usando ponto para os decimais.")
+
+
+
+
+
+#Observação , uso do try/except = evita que o programa trave caso o usuário digite uma letra em vez de um número
+__________________________________________________________________________________________________________________
+
+
+#02
